@@ -920,11 +920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj",
+      "projectUniqueName": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj",
       "projectName": "ECommerce.DTO",
-      "projectPath": "F:\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj",
+      "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj",
       "packagesPath": "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\",
-      "outputPath": "F:\\ECommerceSite\\ECommerce.DTO\\obj\\",
+      "outputPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

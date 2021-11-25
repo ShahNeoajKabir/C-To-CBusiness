@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DatabaseContext;
 using Ecommerce.BLL.Interface;
 using ECommerce.DTO.DTO;
@@ -41,9 +42,26 @@ namespace Ecommerce.BLL.Business_Logic
             await _contextClass.SaveChangesAsync();
             return country.Id;
         }
-        public async Task<List<CountryViewModel>> GetAll()
+        public async Task<List<CountryViewModel>> GetAllActiveCountry()
         {
-            throw new NotImplementedException();
+            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p=>p.Status==1)
+                .ProjectTo<CountryViewModel>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+            return countryViewModels;
+        }
+        public async Task<List<CountryViewModel>> GetAllInActiveCountry()
+        {
+            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p => p.Status == 2)
+                .ProjectTo<CountryViewModel>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+            return countryViewModels;
+        }
+        public async Task<List<CountryViewModel>> GetAllCountry()
+        {
+            List<CountryViewModel> countryViewModels = await _contextClass.Country
+                .ProjectTo<CountryViewModel>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+            return countryViewModels;
         }
 
         public Task<bool> IsExits(string CountryName)

@@ -25,6 +25,7 @@ namespace ECommerce.Services.Controllers
         {
             try
             {
+                
                 var res = await _bLLManager.UpsertCountry(viewModel);
                 return Ok(res);
             }
@@ -33,6 +34,11 @@ namespace ECommerce.Services.Controllers
 
                 throw;
             }
+        }
+        [HttpGet]
+        public async Task<ActionResult<List<CountryViewModel>>> GetAll()
+        {
+            return Ok(await _bLLManager.GetAllCountry());
         }
     }
 }

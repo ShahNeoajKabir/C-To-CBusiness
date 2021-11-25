@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VNBhm0HXW+KytybRPW8Pjumq+K+BlK61AsupMWuToIyZdxkXCEeLBk1059OXS30gtyfTI3lPZpLBJyd2Obz6Fg==",
+  "dgSpecHash": "QRfsUTMSslaEEQqJs5CkTgqd9FoEz/tJn7Qduvf/hX6gCEKyUbwPigAXszgl9n/qW87FxJ2FuedGT5NY+jFgMg==",
   "success": true,
-  "projectFilePath": "F:\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
+  "projectFilePath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

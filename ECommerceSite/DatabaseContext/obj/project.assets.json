@@ -5978,11 +5978,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj",
+      "projectUniqueName": "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj",
       "projectName": "DatabaseContext",
-      "projectPath": "F:\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj",
+      "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj",
       "packagesPath": "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\",
-      "outputPath": "F:\\ECommerceSite\\DatabaseContext\\obj\\",
+      "outputPath": "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6003,8 +6003,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj": {
-              "projectPath": "F:\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj"
+            "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj": {
+              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj"
             }
           }
         }

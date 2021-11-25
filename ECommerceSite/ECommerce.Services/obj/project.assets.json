@@ -6289,11 +6289,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
+      "projectUniqueName": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
       "projectName": "ECommerce.Services",
-      "projectPath": "F:\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
+      "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Services\\ECommerce.Services.csproj",
       "packagesPath": "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\",
-      "outputPath": "F:\\ECommerceSite\\ECommerce.Services\\obj\\",
+      "outputPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6314,14 +6314,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj": {
-              "projectPath": "F:\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj"
+            "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj": {
+              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj"
             },
-            "F:\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj": {
-              "projectPath": "F:\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj"
+            "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj": {
+              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj"
             },
-            "F:\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj": {
-              "projectPath": "F:\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj"
+            "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj": {
+              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj"
             }
           }
         }

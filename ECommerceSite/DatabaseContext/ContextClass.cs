@@ -15,6 +15,7 @@ namespace DatabaseContext
     {
         public ContextClass(DbContextOptions<ContextClass> options) : base(options)
         {
+            //Database.EnsureCreated();
         }
 
         public  DbSet<State> State { get; set; }

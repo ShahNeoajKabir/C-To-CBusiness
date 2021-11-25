@@ -14,7 +14,6 @@ namespace ECommerce.DTO.DTO
         public int CityId { get; set; }
         public int DivisionId { get; set; }
         public int CountryId { get; set; }
-
         public State State { get; set; }
         public City City { get; set; }
         public Division Division { get; set; }

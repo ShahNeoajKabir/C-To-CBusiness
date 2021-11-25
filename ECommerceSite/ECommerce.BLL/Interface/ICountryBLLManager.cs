@@ -10,7 +10,9 @@ namespace Ecommerce.BLL.Interface
     public interface ICountryBLLManager
     {
         Task<int> UpsertCountry(CountryViewModel viewModel);
-        Task<List<CountryViewModel>> GetAll();
+        Task<List<CountryViewModel>> GetAllCountry();
+        Task<List<CountryViewModel>> GetAllActiveCountry();
+        Task<List<CountryViewModel>> GetAllInActiveCountry();
         Task<bool> IsExits(string CountryName);
     }
 }
