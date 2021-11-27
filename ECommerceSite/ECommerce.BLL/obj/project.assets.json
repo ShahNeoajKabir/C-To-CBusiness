@@ -1617,6 +1617,21 @@
           "bin/placeholder/DatabaseContext.dll": {}
         }
       },
+      "ECommerce.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "ECommerce.DTO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECommerce.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Common.dll": {}
+        }
+      },
       "ECommerce.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6043,6 +6058,11 @@
       "path": "../DatabaseContext/DatabaseContext.csproj",
       "msbuildProject": "../DatabaseContext/DatabaseContext.csproj"
     },
+    "ECommerce.Common/1.0.0": {
+      "type": "project",
+      "path": "../ECommerce.Common/ECommerce.Common.csproj",
+      "msbuildProject": "../ECommerce.Common/ECommerce.Common.csproj"
+    },
     "ECommerce.DTO/1.0.0": {
       "type": "project",
       "path": "../ECommerce.DTO/ECommerce.DTO.csproj",
@@ -6054,30 +6074,30 @@
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "DatabaseContext >= 1.0.0",
+      "ECommerce.Common >= 1.0.0",
       "ECommerce.DTO >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj",
+      "projectUniqueName": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj",
       "projectName": "ECommerce.BLL",
-      "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj",
-      "packagesPath": "C:\\Users\\Shah Neoaj Kabir\\.nuget\\packages\\",
-      "outputPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\obj\\",
+      "projectPath": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\ECommerce.BLL.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Shah Neoaj Kabir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6091,11 +6111,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj": {
-              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj"
+            "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj": {
+              "projectPath": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\DatabaseContext\\DatabaseContext.csproj"
             },
-            "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj": {
-              "projectPath": "F:\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj"
+            "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj": {
+              "projectPath": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.Common\\ECommerce.Common.csproj"
+            },
+            "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj": {
+              "projectPath": "E:\\GitHub\\C-To-CBusiness\\ECommerceSite\\ECommerce.DTO\\ECommerce.DTO.csproj"
             }
           }
         }
@@ -6146,7 +6169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

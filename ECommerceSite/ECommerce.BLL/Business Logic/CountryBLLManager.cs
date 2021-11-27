@@ -29,6 +29,7 @@ namespace Ecommerce.BLL.Business_Logic
         public async Task<int> UpsertCountry(CountryViewModel viewModel)
         {
             Country country ;
+            viewModel.CountryName = viewModel.CountryName.Trim();
             country = await _contextClass.Country.FirstOrDefaultAsync(p => p.Id == viewModel.Id);
             if (country == null)
             {
@@ -38,20 +39,22 @@ namespace Ecommerce.BLL.Business_Logic
                 await _contextClass.Country.AddAsync(country);
             }
 
+            if (_contextClass.Country.Any(a => a.CountryName.ToLower() == viewModel.CountryName.ToLower() && a.Id != viewModel.Id))
+                throw new DuplicateWaitObjectException("Name", viewModel.CountryName);
             country = _mapper.Map((CountryViewModel)viewModel, country);
             await _contextClass.SaveChangesAsync();
             return country.Id;
         }
         public async Task<List<CountryViewModel>> GetAllActiveCountry()
         {
-            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p=>p.Status==1)
+            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p=>p.Status==(int)ECommerce.Common.Enum.Enum.AvailableStatus.Active)
                 .ProjectTo<CountryViewModel>(_mapper.ConfigurationProvider)
                 .ToListAsync();
             return countryViewModels;
         }
         public async Task<List<CountryViewModel>> GetAllInActiveCountry()
         {
-            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p => p.Status == 2)
+            List<CountryViewModel> countryViewModels = await _contextClass.Country.Where(p => p.Status == (int)ECommerce.Common.Enum.Enum.AvailableStatus.Inactive)
                 .ProjectTo<CountryViewModel>(_mapper.ConfigurationProvider)
                 .ToListAsync();
             return countryViewModels;

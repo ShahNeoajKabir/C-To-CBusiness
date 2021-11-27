@@ -2,6 +2,8 @@
 using DatabaseContext;
 using Ecommerce.BLL.Business_Logic;
 using Ecommerce.BLL.Interface;
+using ECommerce.BLL.Business_Logic;
+using ECommerce.BLL.Interface;
 using ECommerce.Common.Helper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +43,8 @@ namespace ECommerce.Services
             services.AddDbContext<ContextClass>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")), ServiceLifetime.Transient);
             services.AddAutoMapper(typeof(AutoMappingProfile).Assembly);
             services.AddScoped<ICountryBLLManager, CountryBLLManager>();
+            services.AddScoped<IDivisionBLLManager, DivisionBLLManager>();
+            services.AddScoped<ICityBLLManager, CityBLLManager>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

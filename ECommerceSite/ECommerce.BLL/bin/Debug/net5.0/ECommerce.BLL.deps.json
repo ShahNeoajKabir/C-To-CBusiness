@@ -11,6 +11,7 @@
           "AutoMapper": "10.1.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "DatabaseContext": "1.0.0",
+          "ECommerce.Common": "1.0.0",
           "ECommerce.DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.12"
@@ -1154,6 +1155,16 @@
           "DatabaseContext.dll": {}
         }
       },
+      "ECommerce.Common/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "ECommerce.DTO": "1.0.0"
+        },
+        "runtime": {
+          "ECommerce.Common.dll": {}
+        }
+      },
       "ECommerce.DTO/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12"
@@ -1899,6 +1910,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "DatabaseContext/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ECommerce.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

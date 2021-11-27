@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DatabaseContext\DatabaseContext.csproj" />
+    <ProjectReference Include="..\ECommerce.Common\ECommerce.Common.csproj" />
     <ProjectReference Include="..\ECommerce.DTO\ECommerce.DTO.csproj" />
   </ItemGroup>
 
