@@ -34,7 +34,6 @@ E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\bin\Debug\net5.0\ECommerce.
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\bin\Debug\net5.0\ECommerce.DTO.dll
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\bin\Debug\net5.0\ref\ECommerce.DTO.dll
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\bin\Debug\net5.0\ECommerce.DTO.pdb
-E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.csprojAssemblyReference.cache
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.GeneratedMSBuildEditorConfig.editorconfig
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.AssemblyInfoInputs.cache
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.AssemblyInfo.cs
@@ -43,3 +42,4 @@ E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ref\ECommerce.DTO.dll
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.pdb
 E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.genruntimeconfig.cache
+E:\GitHub\C-To-CBusiness\ECommerceSite\ECommerce.DTO\obj\Debug\net5.0\ECommerce.DTO.csprojAssemblyReference.cache

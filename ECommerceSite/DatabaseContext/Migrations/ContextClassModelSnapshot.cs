@@ -186,6 +186,75 @@ namespace DatabaseContext.Migrations
                     b.ToTable("AspNetUserRoles");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brand");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.City", b =>
                 {
                     b.Property<int>("Id")
@@ -219,6 +288,36 @@ namespace DatabaseContext.Migrations
                     b.HasIndex("DivisionId");
 
                     b.ToTable("City");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Color", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Color");
                 });
 
             modelBuilder.Entity("ECommerce.DTO.DTO.Country", b =>
@@ -286,6 +385,213 @@ namespace DatabaseContext.Migrations
                     b.ToTable("Division");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Authenticity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("DiscountPercentige")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Features")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("NormalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SubCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("SubCategoryId");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductColor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ColorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProducId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ColorId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SizeId");
+
+                    b.ToTable("ProductColor");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductPhoto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductPhoto");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductSize", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SizeId");
+
+                    b.ToTable("productSize");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Size", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SizeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Size");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.State", b =>
                 {
                     b.Property<int>("Id")
@@ -321,12 +627,53 @@ namespace DatabaseContext.Migrations
                     b.ToTable("State");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.SubCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SubCategory");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.UserPhoto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("AppRoleId")
+                        .HasColumnType("int");
 
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
@@ -356,6 +703,8 @@ namespace DatabaseContext.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppRoleId");
 
                     b.HasIndex("AppUserId");
 
@@ -524,6 +873,84 @@ namespace DatabaseContext.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.Product", b =>
+                {
+                    b.HasOne("ECommerce.DTO.DTO.Brand", "Brand")
+                        .WithMany("product")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ECommerce.DTO.DTO.Category", "Category")
+                        .WithMany("product")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ECommerce.DTO.DTO.SubCategory", "SubCategory")
+                        .WithMany("product")
+                        .HasForeignKey("SubCategoryId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("SubCategory");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductColor", b =>
+                {
+                    b.HasOne("ECommerce.DTO.DTO.Color", "Color")
+                        .WithMany("ProductColor")
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ECommerce.DTO.DTO.Product", "Product")
+                        .WithMany("ProductColor")
+                        .HasForeignKey("ProductId");
+
+                    b.HasOne("ECommerce.DTO.DTO.Size", null)
+                        .WithMany("ProductColor")
+                        .HasForeignKey("SizeId");
+
+                    b.Navigation("Color");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductPhoto", b =>
+                {
+                    b.HasOne("ECommerce.DTO.DTO.Product", "product")
+                        .WithMany("ProductPhoto")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("product");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.ProductSize", b =>
+                {
+                    b.HasOne("ECommerce.DTO.DTO.Product", "Product")
+                        .WithMany("ProductSize")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ECommerce.DTO.DTO.Size", "Size")
+                        .WithMany()
+                        .HasForeignKey("SizeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Size");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.State", b =>
                 {
                     b.HasOne("ECommerce.DTO.DTO.City", "City")
@@ -535,8 +962,23 @@ namespace DatabaseContext.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.SubCategory", b =>
+                {
+                    b.HasOne("ECommerce.DTO.DTO.Category", "Category")
+                        .WithMany("subCategory")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.UserPhoto", b =>
                 {
+                    b.HasOne("ECommerce.DTO.DTO.AppRole", null)
+                        .WithMany("UserPhotos")
+                        .HasForeignKey("AppRoleId");
+
                     b.HasOne("ECommerce.DTO.DTO.AppUser", "AppUser")
                         .WithMany("UserPhoto")
                         .HasForeignKey("AppUserId")
@@ -584,6 +1026,8 @@ namespace DatabaseContext.Migrations
 
             modelBuilder.Entity("ECommerce.DTO.DTO.AppRole", b =>
                 {
+                    b.Navigation("UserPhotos");
+
                     b.Navigation("UserRole");
                 });
 
@@ -594,11 +1038,28 @@ namespace DatabaseContext.Migrations
                     b.Navigation("UserRole");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.Brand", b =>
+                {
+                    b.Navigation("product");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Category", b =>
+                {
+                    b.Navigation("product");
+
+                    b.Navigation("subCategory");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.City", b =>
                 {
                     b.Navigation("AppUser");
 
                     b.Navigation("State");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Color", b =>
+                {
+                    b.Navigation("ProductColor");
                 });
 
             modelBuilder.Entity("ECommerce.DTO.DTO.Country", b =>
@@ -615,9 +1076,28 @@ namespace DatabaseContext.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("ECommerce.DTO.DTO.Product", b =>
+                {
+                    b.Navigation("ProductColor");
+
+                    b.Navigation("ProductPhoto");
+
+                    b.Navigation("ProductSize");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.Size", b =>
+                {
+                    b.Navigation("ProductColor");
+                });
+
             modelBuilder.Entity("ECommerce.DTO.DTO.State", b =>
                 {
                     b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("ECommerce.DTO.DTO.SubCategory", b =>
+                {
+                    b.Navigation("product");
                 });
 #pragma warning restore 612, 618
         }

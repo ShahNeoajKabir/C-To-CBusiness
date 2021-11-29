@@ -23,6 +23,15 @@ namespace DatabaseContext
         public  DbSet<Division> Division { get; set; }
         public  DbSet<Country> Country { get; set; }
         public  DbSet<UserPhoto> UserPhoto { get; set; }
+        public  DbSet<Brand> Brand { get; set; }
+        public  DbSet<Category> Category { get; set; }
+        public  DbSet<Color> Color { get; set; }
+        public  DbSet<Product> Product { get; set; }
+        public  DbSet<ProductColor> ProductColor { get; set; }
+        public  DbSet<ProductPhoto> ProductPhoto { get; set; }
+        public  DbSet<ProductSize> productSize { get; set; }
+        public  DbSet<Size> Size { get; set; }
+        public  DbSet<SubCategory> SubCategory { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

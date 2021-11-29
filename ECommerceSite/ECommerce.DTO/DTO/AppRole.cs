@@ -13,5 +13,6 @@ namespace ECommerce.DTO.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
         public ICollection<AppUserRole> UserRole { get; set; }
+        public ICollection<UserPhoto>  UserPhotos { get; set; }
     }
 }

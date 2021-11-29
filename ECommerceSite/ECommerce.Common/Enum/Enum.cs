@@ -14,5 +14,11 @@ namespace ECommerce.Common.Enum
             Inactive = 2,
             Delete = 3,
         }
+
+        public enum ProductCondition
+        {
+            Used=1,
+            New=2
+        }
     }
 }
